@@ -50,7 +50,8 @@ function App() {
   const [specialties, setSpecialties] = useState<Specialties>(SpecialtyArray)
   const [name, setName] = useState("");
   const selectedSpecialty = specialties.filter((specialty) => specialty.selected)[0]?.name;
-  const url = 'http://localhost:8080/companies?'
+  const baseUrl = process.env.NODE_ENV === 'development' ? 'http://localhost:8080' : 'https://search-list-server.herokuapp.com';
+  const url = `${baseUrl}/companies?`;
   const params = new URLSearchParams();
 
   if (selectedSpecialty) {

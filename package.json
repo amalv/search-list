@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build:server": "npx tsc --watch --project src/server/tsconfig.json",
-    "server": "concurrently \"npm:build:server\" \"nodemon -q src/server/build/api/index.js\"",
+    "server": "concurrently \"npm:build:server\" \"cross-env NODE_ENV=development nodemon -q src/server/build/api/index.js\"",
     "dev": "concurrently \"npm start\" \"npm run server\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -52,6 +52,7 @@
     "@types/express": "^4.17.14",
     "@types/node": "^18.11.7",
     "concurrently": "^7.5.0",
+    "cross-env": "^7.0.3",
     "eslint-config-prettier": "^8.5.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",

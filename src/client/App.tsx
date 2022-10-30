@@ -54,6 +54,7 @@ function App() {
   const url = `${baseUrl}/companies?`;
   const params = new URLSearchParams();
 
+  console.log('ENVIRONMENT: ', process.env.NODE_ENV);
   if (selectedSpecialty) {
     params.append('specialty', selectedSpecialty)
   }

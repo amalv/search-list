@@ -6,16 +6,13 @@ const environment = process.env.NODE_ENV;
 console.log("ENVIRONMENT: ", environment);
 const app: Express = express();
 const port = process.env.PORT || 8080;
-const url = String(process.env.HOSTNAME).split("-");
-const corsOptions = {
-  origin: ["http://localhost:3000", "https://search-list-client.herokuapp.com"],
-};
+app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 
-app.get("/companies", cors(corsOptions), (req: Request, res: Response) => {
+app.get("/companies", (req: Request, res: Response) => {
   const filters = req.query;
   const specialtyFilter = filters?.specialty?.toString().toLowerCase();
   const nameFilter = filters?.search?.toString().toLowerCase();

@@ -8,10 +8,7 @@ const app: Express = express();
 const port = process.env.PORT || 8080;
 const url = String(process.env.HOSTNAME).split("-");
 const corsOptions = {
-  origin: [
-    "http://localhost:3000",
-    "https://search-list-client.herokuapp.com/",
-  ],
+  origin: ["http://localhost:3000", "https://search-list-client.herokuapp.com"],
 };
 
 app.get("/", (req: Request, res: Response) => {

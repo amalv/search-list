@@ -15,8 +15,8 @@
   },
   "scripts": {
     "build:server": "npx tsc --watch ",
-    "dev": "concurrently \"npm:build:server\" \"cross-env NODE_ENV=development nodemon -q build/api/index.js\"",
-    "start": "rimraf build && npm run build && cross-env NODE_ENV=production node build/api/index.js",
+    "dev": "concurrently \"npm:build:server\" \"nodemon -q build/api/index.js\"",
+    "start": "rimraf build && npm run build && node build/api/index.js",
     "build": "npx tsc"
   },
   "eslintConfig": {

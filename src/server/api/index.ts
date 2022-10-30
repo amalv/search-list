@@ -1,12 +1,15 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
-import data from "./data.json";
+import data from "../data.json";
 
 const app: Express = express();
 const port = 8080;
 const url = String(process.env.HOSTNAME).split("-");
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://search-list-5b4s-rkk63o4vx-circle-back.vercel.app/",
+  ],
 };
 
 app.get("/", (req: Request, res: Response) => {

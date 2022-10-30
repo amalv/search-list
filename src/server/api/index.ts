@@ -10,7 +10,7 @@ const url = String(process.env.HOSTNAME).split("-");
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://search-list-5b4s-rkk63o4vx-circle-back.vercel.app/",
+    "https://search-list-client.herokuapp.com/",
   ],
 };
 

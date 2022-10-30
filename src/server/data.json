@@ -1,0 +1,32 @@
+[
+  {
+    "name": "PV Construction",
+    "city": "Berlin",
+    "image": "https://via.placeholder.com/300x150",
+    "specialties": ["excavation", "plumbing"]
+  },
+  {
+    "name": "ZITEC Gruppe",
+    "city": "Hamburg",
+    "image": "https://via.placeholder.com/300x150",
+    "specialties": ["sanitation", "plumbing"]
+  },
+  {
+    "name": "ETEC",
+    "city": "Munich",
+    "image": "https://via.placeholder.com/300x150",
+    "specialties": ["electrical", "excavation", "roofing"]
+  },
+  {
+    "name": "AquaTelligent",
+    "city": "Cologne",
+    "image": "https://via.placeholder.com/300x150",
+    "specialties": ["sanitation", "plumbing"]
+  },
+  {
+    "name": "Monier roofing",
+    "city": "Frankfurt",
+    "image": "https://via.placeholder.com/300x150",
+    "specialties": ["roofing", "electrical"]
+  }
+]

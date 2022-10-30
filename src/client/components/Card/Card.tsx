@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import icon from './icon.svg';
 
@@ -68,7 +69,7 @@ const ImageContainer = styled.div`
 
 export const Card = ({ name, city, image, specialties }: CardProps) => {
   return (
-    <CardContainer>
+    <CardContainer >
       <InfoContainer>
         <Name>{name}</Name>
         <LocationContainer>
@@ -81,11 +82,11 @@ export const Card = ({ name, city, image, specialties }: CardProps) => {
       </ImageContainer>
       <ChipContainer>
         {specialties?.map((specialty) =>
-          <Chip>
+          <Chip key={specialty}>
             <Specialty>{specialty}</Specialty>
           </Chip>
         )}
       </ChipContainer>
-    </CardContainer>
+    </CardContainer >
   );
 };

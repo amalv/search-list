@@ -3,7 +3,7 @@ import cors from "cors";
 import data from "../data.json";
 
 const app: Express = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const url = String(process.env.HOSTNAME).split("-");
 const corsOptions = {
   origin: [

@@ -16,13 +16,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "rimraf": "^3.0.2",
     "serve": "^14.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:server": "npx tsc --watch --project src/server/tsconfig.json",
-    "server": "concurrently \"npm:build:server\" \"nodemon -q src/server/build/api/index.js\"",
+    "build:server": "npx tsc --project src/server/tsconfig.json",
+    "nodemon": "nodemon src/server/build/index.js",
+    "server": "rimraf src/server/build && npm run build:server && npm run nodemon",
     "dev": "concurrently \"react-scripts start\" \"npm run server\"",
     "start": "concurrently \"react-scripts build\" \"serve -s build\"",
     "build": "react-scripts build",

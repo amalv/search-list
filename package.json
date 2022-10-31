@@ -24,7 +24,7 @@
     "build:server": "npx tsc --watch --project src/server/tsconfig.json",
     "server": "concurrently \"npm:build:server\" \"nodemon -q src/server/build/api/index.js\"",
     "dev": "concurrently \"react-scripts start\" \"npm run server\"",
-    "start": "serve -s build",
+    "start": "concurrently \"react-scripts build\" \"serve -s build\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

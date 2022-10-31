@@ -1,9 +1,7 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
-import data from "../data.json";
+import data from "./data.json";
 
-const environment = process.env.NODE_ENV;
-console.log("ENVIRONMENT: ", environment);
 const app: Express = express();
 const port = process.env.PORT || 8080;
 app.use(cors());
